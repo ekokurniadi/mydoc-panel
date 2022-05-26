@@ -1,6 +1,7 @@
 module documentation
 
-go 1.18
+// +heroku goVersion go1.17
+go 1.17
 
 require github.com/go-playground/validator/v10 v10.11.0
 
