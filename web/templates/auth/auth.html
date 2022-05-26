@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/css/style.css"
+      media="screen,projection"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login User</title>
+  </head>
+
+  <body
+    style="
+      background-image: url('/icon/background-login.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  >
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-12 d-flex justify-content-center py-5">
+          <div class="card shadow">
+            <div class="colors"></div>
+            <div class="card-body">
+              <div class="d-flex justify-content-center">
+                <div>
+                  <img src="icon/icon.png" alt="" width="70px" />
+                </div>
+              </div>
+              <h6 style="text-align: center">User Authentication</h6>
+              <form action="/sessions" method="POST">
+                <div class="form-circle mb-3 mt-4">
+                  <input
+                    type="text"
+                    class="rounded"
+                    name="username"
+                    id="username"
+                    placeholder="Username"
+                  />
+                </div>
+                <div class="form-circle">
+                  <input
+                    type="password"
+                    class="rounded"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="form-circle mt-2">
+                  <input
+                    type="checkbox"
+                    onclick="myFunction();"
+                    name="show_pass"
+                    id="show_pass"
+                  />
+                  <label for="" style="font-size: 9pt">Show Password</label>
+                </div>
+                <div class="sign d-flex justify-content-center mt-3 mb-2">
+                  <div class="sk-circle" id="test">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                  </div>
+                  <button
+                    class="btn btn-danger btn-block btn-flat"
+                    id="btn-login"
+                    onclick="login()"
+                  >
+                    LOGIN
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div
+              class="form-circle d-flex justify-content-center align-content-end mb-2"
+            >
+              <h5 style="font-size: 9pt; color: grey">
+                Made with <i class="fa fa-heart" style="color: red"></i> from
+                Jambi, Indonesia
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copy d-flex justify-content-center mt-4 mb-3">
+            <h6>Copyright 2021</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("password");
+      if (x.type === "password ") {
+        x.type = "text ";
+      } else {
+        x.type = "password ";
+      }
+    }
+  </script>
+  <script>
+    window.onload = function () {
+      document.getElementById("test").style.display = "none";
+    };
+
+    function login() {
+      document.getElementById("test").style.display = "block";
+      document.getElementById("btn-login").style.display = "none";
+    }
+  </script>
+
+  {{if .data}}
+  <script>
+    document.getElementById("test").style.display = "none";
+    document.getElementById("btn-login").style.display = "block";
+    Swal.fire({
+      icon: "success",
+      title: "Notification",
+      text: "{{.data}}",
+    });
+  </script>
+  {{end}}
+</html>

@@ -1,0 +1,494 @@
+.card-header {
+    background-color: rgb(43, 101, 226);
+}
+
+.card {
+    border-radius: 10px;
+    font-family: 'Poppins';
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-box-shadow: 1px 1px 1px #666;
+    -webkit-box-shadow: 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px #666;
+}
+
+.card .lupa a {
+    color: gray;
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+
+.card .belum p {
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+
+.card-body {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 70px;
+}
+
+.card-signup .card-body {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+.text-center {
+    font-family: 'Poppins';
+    color: #000000;
+    font-size: 13px;
+}
+
+.log {
+    font-family: 'Poppins';
+    font-size: 13px;
+}
+
+.card-signup p {
+    font-family: 'Poppins';
+    color: grey;
+    font-size: 13px;
+}
+
+.card-signup i {
+    margin-top: -10px;
+    color: rgb(228, 225, 225);
+    font-size: 40px;
+}
+
+.card h6 {
+    font-family: 'Poppins';
+    color: grey;
+    font-weight: 500;
+}
+
+.card .colors {
+    width: 100%;
+    height: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #3075F7;
+}
+
+input.rounded {
+    font-family: 'Poppins';
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 90px;
+    -moz-box-shadow: 1px 1px 1px #666;
+    -webkit-box-shadow: 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px #666;
+    font-size: 12px;
+    padding: 10px;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+.field-icon {
+    float: right;
+    margin-left: -40px;
+    margin-right: 10px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 12px;
+    color: gray;
+}
+
+input.rounded-password {
+    font-family: 'Poppins';
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+    -moz-box-shadow: 1px 1px 1px #666;
+    -webkit-box-shadow: 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px #666;
+    font-size: 12px;
+    padding: 10px;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+textarea.rounded {
+    font-family: 'Poppins';
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 90px;
+    -moz-box-shadow: 1px 1px 1px #666;
+    -webkit-box-shadow: 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px #666;
+    font-size: 12px;
+    padding: 10px;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+.input-field {
+    font-family: 'Poppins';
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 1px 1px 1px #666;
+    -webkit-box-shadow: 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px #666;
+    font-size: 12px;
+    padding: 10px;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+.sel {
+    font-family: 'Poppins';
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+    -moz-box-shadow: 1px 1px 1px #666;
+    -webkit-box-shadow: 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px #666;
+    font-size: 12px;
+    padding: 10px;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 100%;
+    background: url('/images/arrow.png') no-repeat right;
+    background-position-x: 400px;
+    background-size: 20px;
+}
+
+.input-field:focus {
+    border-color: #4c4d4c;
+}
+
+.btn-danger {
+    background-color: #A01862;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Poppins';
+    font-size: 13px;
+    width: 100%;
+}
+
+.btn-danger:hover {
+    background-color: #A01862;
+    border: none;
+}
+
+.daftar {
+    margin-top: -10px;
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+
+.copy h6 {
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.register1 h6 {
+    color: black;
+}
+
+.register1-sign-up a {
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+
+div.register1-sign-up {
+    margin-left: 10px;
+}
+
+.register1-sign-up p {
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.register1-sign-up .material-icons {
+    font-size: 20px;
+}
+
+.card-body .register1-data-pengguna {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 70px;
+}
+
+.label-register {
+    color: rgb(77, 76, 76);
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.label-kecil {
+    color: rgb(187, 186, 186);
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+
+.round {
+    position: relative;
+}
+
+.round label {
+    background-color: #fff;
+    border: 1px solid rgb(170, 169, 169);
+    border-radius: 30%;
+    cursor: pointer;
+    height: 28px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 28px;
+}
+
+.round label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 7px;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    transform: rotate(-45deg);
+    width: 11px;
+}
+
+.round input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked+label {
+    background-color: #A01862;
+    border-color: #A01862;
+}
+
+.round input[type="checkbox"]:checked+label:after {
+    opacity: 1;
+}
+
+.agree {
+    margin-left: 5px;
+    align-self: center;
+    font-family: 'Poppins';
+    color: rgb(77, 76, 76);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.car {
+    width: 45%;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media (max-width: 680px) {
+    .car {
+        min-width: 100%;
+    }
+    div.register1-sign-up {
+        margin-left: -120px;
+    }
+    .agree {
+        margin-top: 20px;
+        align-self: center;
+        font-family: 'Poppins';
+        color: rgb(77, 76, 76);
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+.sk-circle {
+    margin: 0px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.sk-circle .sk-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sk-circle .sk-child:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    height: 15%;
+    background-color: #333;
+    border-radius: 100%;
+    -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+    animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+}
+
+.sk-circle .sk-circle2 {
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.sk-circle .sk-circle3 {
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.sk-circle .sk-circle4 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.sk-circle .sk-circle5 {
+    -webkit-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
+
+.sk-circle .sk-circle6 {
+    -webkit-transform: rotate(150deg);
+    -ms-transform: rotate(150deg);
+    transform: rotate(150deg);
+}
+
+.sk-circle .sk-circle7 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.sk-circle .sk-circle8 {
+    -webkit-transform: rotate(210deg);
+    -ms-transform: rotate(210deg);
+    transform: rotate(210deg);
+}
+
+.sk-circle .sk-circle9 {
+    -webkit-transform: rotate(240deg);
+    -ms-transform: rotate(240deg);
+    transform: rotate(240deg);
+}
+
+.sk-circle .sk-circle10 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.sk-circle .sk-circle11 {
+    -webkit-transform: rotate(300deg);
+    -ms-transform: rotate(300deg);
+    transform: rotate(300deg);
+}
+
+.sk-circle .sk-circle12 {
+    -webkit-transform: rotate(330deg);
+    -ms-transform: rotate(330deg);
+    transform: rotate(330deg);
+}
+
+.sk-circle .sk-circle2:before {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.sk-circle .sk-circle3:before {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+.sk-circle .sk-circle4:before {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.sk-circle .sk-circle5:before {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+.sk-circle .sk-circle6:before {
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+}
+
+.sk-circle .sk-circle7:before {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.sk-circle .sk-circle8:before {
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.sk-circle .sk-circle9:before {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+
+.sk-circle .sk-circle10:before {
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+
+.sk-circle .sk-circle11:before {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+}
+
+.sk-circle .sk-circle12:before {
+    -webkit-animation-delay: -0.1s;
+    animation-delay: -0.1s;
+}
+
+@-webkit-keyframes sk-circleBounceDelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes sk-circleBounceDelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,165 @@
+<h2 class="mb-4">Update Detail Dokumentasi</h2>
+
+<a href="/features_detail" class="btn btn-danger mb-3"
+  ><i class="fa fa-arrow-left"></i> Back</a
+>
+<div class="card mb-4" id="app">
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="name">Feature Name</label>
+        <select
+          name="feature_name"
+          id="pilihan"
+          class="form-control"
+          required
+          v-model="featureID"
+        >
+          <option value="{{.input.FeatureID}}">{{.featureName}}</option>
+          {{ range $post := .features }}
+          <option value="{{ $post.ID }}">{{ $post.FeatureName }}</option>
+          {{ end }}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="name">Title</label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          class="form-control"
+          required
+          placeholder="Feature Name"
+          autocomplete="false"
+          v-model="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Path Of File</label>
+        <textarea
+          name="path_of_file"
+          id="path_of_file"
+          cols="30"
+          rows="10"
+          class="form-control"
+          v-model="path_of_file"
+          style="height: 100px"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="name">Your Code</label>
+        <textarea
+          name="code"
+          id="code"
+          cols="30"
+          rows="10"
+          class="form-control"
+          v-model="code"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="name">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          class="form-control"
+          v-model="description"
+          style="height: 100px"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="name">Author Name</label>
+        <input
+          type="text"
+          name="author_name"
+          id="author_name"
+          class="form-control"
+          required
+          placeholder="Author Name"
+          autocomplete="false"
+          v-model="author_name"
+        />
+      </div>
+      <div class="form-group">
+        <button
+          class="btn btn-primary"
+          type="button"
+          id="btnSubmit"
+          @click="saveData"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    // load select2
+    $("#pilihan").select2({
+      placeholder: "Select an option",
+    });
+  });
+</script>
+<script>
+  new Vue({
+    el: "#app",
+    delimiters: ["{%", "%}"],
+    data() {
+      return {
+        options: "{{.features}}",
+        token: "{{.token}}",
+        auth: { Authorization: "Bearer " + this.token },
+        featureID: "{{.input.FeatureID}}",
+        title: "{{.input.Title}}",
+        description: "{{.input.Description}}",
+        path_of_file: "{{.input.PathOfFile}}",
+        code: "{{.input.Code}}",
+        author_name: "{{.input.AuthorName}}",
+
+        editor: "",
+      };
+    },
+    methods: {
+      async saveData() {
+        var data = {};
+        return await axios
+          .put("http://localhost:8080/api/v1/feature_detail/" + "{{.ID}}", {
+            feature_id: parseInt(this.featureID),
+            title: this.title,
+            path_of_file: this.path_of_file,
+            code: this.code,
+            description: this.description,
+            author_name: this.author_name,
+          })
+          .then((response) => {
+            setTimeout(() => {
+              Swal.fire({
+                icon: "success",
+                title: "Notification",
+                text: response.data.meta.message,
+              });
+
+              window.location.href = "/features_detail";
+            }, 1500);
+          });
+      },
+    },
+    mounted() {
+      editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: "application/dart",
+        tabMode: "indent",
+        lineNumbers: true,
+        lineWrapping: true,
+        autoCloseTags: true,
+        theme: "monokai",
+      }).on("change", (e) => {
+        this.code = e.getValue();
+      });
+      axios.defaults.headers["Authorization"] = "Bearer " + this.token;
+      console.log(this.options);
+    },
+  });
+</script>

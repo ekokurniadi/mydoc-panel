@@ -1,0 +1,46 @@
+<h2 class="mb-4">List of User</h2>
+
+<a href="/users/new" class="btn btn-primary mb-3"
+  ><i class="fa fa-plus"></i> New User</a
+>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <table class="table mb-0">
+      <thead class="thead-light">
+        <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range .users }}
+        <tr>
+          <td>{{ .Name }}</td>
+          <td>{{ .Username }}</td>
+          <td>{{ .Password }}</td>
+          <td>
+            <a href="/users/update/{{ .ID }}"><i class="fa fa-edit"></i></a>
+            <a
+              href="/users/delete/{{ .ID }}"
+              onclick="return confirm('Are you sure ?')"
+              ><i class="fa fa-trash bg-red" style="color: red"></i
+            ></a>
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</div>
+{{if .data}}
+<script>
+  Swal.fire({
+    icon: "success",
+    title: "Notification",
+    text: "{{.data}}",
+  });
+</script>
+{{end}}

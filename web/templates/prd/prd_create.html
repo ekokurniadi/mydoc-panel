@@ -1,0 +1,50 @@
+<h2 class="mb-4">Create a new PRD</h2>
+
+<a href="/prds" class="btn btn-danger mb-3"
+  ><i class="fa fa-arrow-left"></i> Back</a
+>
+<div class="card mb-4">
+  <div class="card-body">
+    <form action="/prds" method="POST">
+      <div class="form-group">
+        <label for="name">Document Name</label>
+        <input
+          type="text"
+          name="document_name"
+          id="document_name"
+          class="form-control"
+          required
+          placeholder="Document Name"
+          autocomplete="false"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Description</label>
+        <input
+          type="text"
+          name="description"
+          id="description"
+          class="form-control"
+          required
+          placeholder="Description"
+          autocomplete="false"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Link</label>
+        <input
+          type="text"
+          name="link"
+          id="link"
+          class="form-control"
+          required
+          placeholder="Link"
+          autocomplete="false"
+        />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
