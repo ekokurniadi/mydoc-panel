@@ -10,7 +10,6 @@
         <label for="name">Feature Name</label>
         <select
           name="feature_name"
-          id="pilihan"
           class="form-control"
           required
           v-model="featureID"
@@ -28,7 +27,7 @@
           id="title"
           class="form-control"
           required
-          placeholder="Feature Name"
+          placeholder="Title Name"
           autocomplete="false"
           v-model="title"
         />
@@ -141,7 +140,7 @@
               });
 
               window.location.href = "/features_detail";
-            }, 1500);
+            }, 1000);
           });
       },
     },
