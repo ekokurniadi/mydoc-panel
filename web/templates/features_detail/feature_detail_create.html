@@ -14,9 +14,7 @@
           class="form-control"
           required
           v-model="featureID"
-          v-if="featureID == 0 ? 'Select an Option' : featureID"
         >
-          <option value="">Select an option</option>
           {{ range $post := .features }}
           <option value="{{ $post.ID }}">{{ $post.FeatureName }}</option>
           {{ end }}
