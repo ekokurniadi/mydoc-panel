@@ -94,7 +94,7 @@ func (h *userHandler) UpdateAction(c *gin.Context) {
 
 	var inputID input.InputIDUser
 	inputID.ID = id
-
+	inputData.Username = c.PostForm("username")
 	inputData.Name = c.PostForm("name")
 	inputData.Password = c.PostForm("password")
 	inputData.Role = c.PostForm("role")

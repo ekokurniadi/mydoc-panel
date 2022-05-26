@@ -119,6 +119,7 @@ func main() {
 	router.GET("/users/update/:id", authAdminMiddleWare(), userWebHandler.Update)
 	router.POST("/users", authAdminMiddleWare(), userWebHandler.Create)
 	router.POST("/users/update_action/:id", authAdminMiddleWare(), userWebHandler.UpdateAction)
+	router.POST("/users/delete/:id", authAdminMiddleWare(), userWebHandler.Delete)
 
 	router.GET("/features", authAdminMiddleWare(), featureWebHandler.Index)
 	router.GET("/features/new", authAdminMiddleWare(), featureWebHandler.New)
