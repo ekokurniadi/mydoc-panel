@@ -71,6 +71,7 @@ func main() {
 	featureDetailWebHandler := webHandler.NewFeatureDetailHandler(featureDetailService, featureService)
 	prdWebHandler := webHandler.NewPRDHandler(prdService)
 
+	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	router.Use(CORSMiddleware())
 	cookieStore := cookie.NewStore([]byte(auth.SECRET_KEY))
