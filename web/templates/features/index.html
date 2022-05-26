@@ -150,9 +150,12 @@
       },
 
       async getAll(params) {
-        return await axios.get("http://localhost:8080/api/v1/features_ssr", {
-          params,
-        });
+        return await axios.get(
+          "https://mydoc-panel.herokuapp.com/api/v1/features_ssr",
+          {
+            params,
+          }
+        );
       },
       retrieveData() {
         const params = this.getRequestParams(
